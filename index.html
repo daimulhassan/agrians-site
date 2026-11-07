@@ -3,24 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agrians</title>
+<title>Agrians | Policy, Research, Proposals and Business Support</title>
+<meta name="description" content="Agrians takes on contract work: policy and procedure writing, research and briefing notes, quotations and proposals, and business documents.">
 <style>
+:root{--ink:#1b2a22;--mut:#5b6b62;--line:#dfe6e1;--bg:#fbfcfb;--acc:#1f6b45;--acc2:#e9f3ed}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(1200px 600px at 50% -10%,#1d3a2a 0%,#0f1f17 60%);color:#eef5ef;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
-main{max-width:640px}
-.mark{width:64px;height:64px;margin:0 auto 28px;border-radius:16px;background:#7bd389;color:#0f1f17;display:grid;place-items:center;font-weight:800;font-size:34px}
-h1{font-size:clamp(2.4rem,7vw,3.8rem);letter-spacing:-.02em;margin-bottom:14px}
-p{color:#a9bfb0;font-size:1.1rem;line-height:1.6}
-.tag{display:inline-block;margin-top:28px;padding:8px 16px;border:1px solid #2f5440;border-radius:999px;font-size:.9rem;color:#7bd389}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);background:#fff}
+header .w{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--ink)}
+.logo span{color:var(--acc)}
+nav a{margin-left:20px;text-decoration:none;color:var(--mut);font-size:.95rem}
+.hero{padding:72px 20px 56px}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;letter-spacing:-.02em;max-width:720px}
+.lead{margin-top:18px;color:var(--mut);font-size:1.15rem;max-width:640px}
+.btn{display:inline-block;margin-top:28px;padding:12px 22px;background:var(--acc);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:1.6rem;margin-bottom:20px;letter-spacing:-.01em}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.c{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
+.c h3{font-size:1.05rem;margin-bottom:6px}
+.c p,.t{color:var(--mut);font-size:.95rem}
+.s{counter-reset:s}
+.s .c::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--acc2);color:var(--acc);font-weight:700;margin-bottom:10px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mut);font-size:.9rem}
 </style>
 </head>
 <body>
+<header><div class="w"><a class="logo" href="#">Agri<span>ans</span></a><nav><a href="#services">Services</a><a href="#process">How it works</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
 <main>
-<div class="mark">A</div>
-<h1>Agrians</h1>
-<p>Our new website is on its way. Check back soon.</p>
-<span class="tag">Coming soon</span>
+<div class="w hero">
+<h1>Reliable help with policies, research, proposals and business documents.</h1>
+<p class="lead">Agrians takes on small, clearly defined contracts and delivers practical work on time. Tell us what you need and get a written quote.</p>
+<a class="btn" href="#contact">Request a quote</a>
+</div>
+<section id="services"><div class="w"><h2>Services</h2><div class="g">
+<div class="c"><h3>Policies and procedures</h3><p>Drafting, reviewing and updating policies, procedures, guidelines and practice manuals.</p></div>
+<div class="c"><h3>Research and analysis</h3><p>Briefing notes, options papers, and legislation or literature reviews in plain language.</p></div>
+<div class="c"><h3>Quotations and proposals</h3><p>Clear scopes, costs and timelines. Proposals and bid responses written to the brief.</p></div>
+<div class="c"><h3>Reports and documents</h3><p>Business reports, plans, letters, templates and meeting materials, ready to use.</p></div>
+<div class="c"><h3>Editing and review</h3><p>Proofreading, restructuring and quality checks for documents you already have.</p></div>
+<div class="c"><h3>Tools and automation</h3><p>Spreadsheets, forms, simple websites and AI-assisted workflows that save time.</p></div>
+</div></div></section>
+<section id="process"><div class="w"><h2>How it works</h2><div class="g s">
+<div class="c"><h3>Tell us the task</h3><p>Share what you need, the deadline and any source material.</p></div>
+<div class="c"><h3>Get a written quote</h3><p>A fixed scope, price and timeline before any work starts.</p></div>
+<div class="c"><h3>Review a draft</h3><p>You see the work early and tell us what to adjust.</p></div>
+<div class="c"><h3>Final delivery</h3><p>Revised, finished files in the format you need.</p></div>
+</div></div></section>
+<section id="about"><div class="w"><h2>About</h2>
+<p class="t" style="max-width:680px;font-size:1.05rem">Agrians is an independent practice taking on contract work across policy, research, writing and business support. A fuller introduction is coming soon.</p>
+</div></section>
+<section id="contact"><div class="w"><h2>Request a quote</h2>
+<p class="t" style="font-size:1.05rem">Contact details are being added. Please check back shortly.</p>
+</div></section>
 </main>
+<footer><div class="w">&copy; Agrians</div></footer>
 </body>
 </html>
