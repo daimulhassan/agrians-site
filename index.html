@@ -1,65 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agrians | Policy, Research, Proposals and Business Support</title>
-<meta name="description" content="Agrians takes on contract work: policy and procedure writing, research and briefing notes, quotations and proposals, and business documents.">
+<meta name="theme-color" content="#1c4a29">
+<meta name="description" content="Agrians offers agricultural advisory, ostrich farming guidance, project planning, quotations, proposals and short-term project support. Run by Daim ul Hassan in British Columbia.">
+<title>Agrians | Agricultural advisory, project planning and proposals | Daim ul Hassan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1b2a22;--mut:#5b6b62;--line:#dfe6e1;--bg:#fbfcfb;--acc:#1f6b45;--acc2:#e9f3ed}
+:root{--g9:#12301b;--g8:#1c4a29;--g6:#3a7a3a;--g2:#dfeed6;--g1:#f0f6ec;--gold:#e8b53a;--gold2:#d9a528;--soil:#5b3f2a;--ink:#1a2a1f;--mut:#51635a;--line:#d6e2d0;--white:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-.w{max-width:960px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line);background:#fff}
-header .w{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--ink)}
-.logo span{color:var(--acc)}
-nav a{margin-left:20px;text-decoration:none;color:var(--mut);font-size:.95rem}
-.hero{padding:72px 20px 56px}
-h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;letter-spacing:-.02em;max-width:720px}
-.lead{margin-top:18px;color:var(--mut);font-size:1.15rem;max-width:640px}
-.btn{display:inline-block;margin-top:28px;padding:12px 22px;background:var(--acc);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
-section{padding:48px 0;border-top:1px solid var(--line)}
-h2{font-size:1.6rem;margin-bottom:20px;letter-spacing:-.01em}
-.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.c{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
-.c h3{font-size:1.05rem;margin-bottom:6px}
-.c p,.t{color:var(--mut);font-size:.95rem}
-.s{counter-reset:s}
-.s .c::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--acc2);color:var(--acc);font-weight:700;margin-bottom:10px}
-footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mut);font-size:.9rem}
+body{font:400 17px/1.65 Figtree,system-ui,sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.025em;line-height:1.08}
+h1{font-size:clamp(40px,5.6vw,72px);max-width:14ch}
+h2{font-size:clamp(30px,3.6vw,46px);max-width:20ch}
+h3{font-size:22px;line-height:1.2;letter-spacing:-.015em}
+p{max-width:60ch}
+.mut{color:var(--mut)}
+.btn{display:inline-block;font:700 16px Figtree,sans-serif;padding:14px 26px;border-radius:999px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn.gold{background:var(--gold);color:var(--g9)}
+.btn.gold:hover{background:var(--gold2)}
+.btn.ghost{border-color:#ffffffaa;color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--g8)}
+.btn.dark{background:var(--g8);color:#fff}
+.btn.dark:hover{background:var(--g9)}
+/* header */
+.top{position:absolute;inset:0 0 auto 0;z-index:5;color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.logo{font:800 24px "Bricolage Grotesque",sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.logo i{font-style:normal;color:var(--gold)}
+.logo small{font:600 11px Figtree,sans-serif;letter-spacing:.2em;margin-top:6px;color:#e8f2e2}
+.top nav{display:flex;align-items:center;gap:28px}
+.top nav a:not(.btn){text-decoration:none;font-weight:600;font-size:15px}
+.top nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:6px}
+.top .btn{padding:10px 20px;font-size:15px}
+/* hero */
+.hero{position:relative;color:#fff;background:var(--g8);overflow:hidden;padding:178px 0 190px}
+.land{position:absolute;inset:0;width:100%;height:100%}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(14,40,22,.93) 0%,rgba(14,40,22,.78) 38%,rgba(14,40,22,.1) 78%)}
+.hero:after{content:"";position:absolute;inset:0 0 auto 0;height:150px;z-index:1;background:linear-gradient(rgba(14,40,22,.7),rgba(14,40,22,0))}
+.hero .wrap{position:relative;z-index:2}
+.hero p{margin-top:24px;font-size:20px;max-width:46ch;color:#e8f2e2}
+.hero .acts{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+/* quick brief bar */
+.bar{position:relative;z-index:3;margin-top:-78px}
+.bar form{background:var(--white);border-radius:18px;box-shadow:0 18px 50px rgba(18,48,27,.22);padding:26px;display:grid;grid-template-columns:1.2fr 1fr 1.4fr auto;gap:16px;align-items:end}
+.bar label{display:block;font-weight:700;font-size:14px;margin-bottom:6px;color:var(--g8)}
+select,input[type=text],input[type=email],textarea{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--white);color:var(--ink)}
+select:focus,input:focus,textarea:focus{border-color:var(--g6);outline:3px solid var(--g2)}
+textarea{min-height:130px;resize:vertical}
+.bar .btn{white-space:nowrap}
+/* sections */
+section.s{padding:104px 0}
+.alt{background:var(--g1)}
+.head{max-width:700px;margin-bottom:46px}
+.head p{margin-top:16px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tile{border-radius:18px;overflow:hidden;background:var(--white);border:1px solid var(--line);display:flex;flex-direction:column}
+.tile .pic{height:170px;display:grid;place-items:center;background:var(--g2);position:relative}
+.tile .pic svg{width:76px;height:76px;stroke:var(--g8);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.tile:nth-child(2) .pic{background:#f7e9bf}.tile:nth-child(3) .pic{background:#e1ecf0}
+.tile:nth-child(4) .pic{background:#efe1d3}.tile:nth-child(5) .pic{background:#e4efdc}.tile:nth-child(6) .pic{background:#f3e6c9}
+.tile .txt{padding:24px 26px 28px}
+.tile p{margin-top:10px;font-size:15.5px;color:var(--mut)}
+.tile.feat{background:var(--g8);color:#fff;border-color:var(--g8)}
+.tile.feat .pic{background:var(--g6)}
+.tile.feat .pic svg{stroke:#fff}
+.tile.feat p{color:#cfe3c8}
+.seq{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:n}
+.seq li{counter-increment:n;background:var(--white);border-radius:16px;padding:26px;border:1px solid var(--line)}
+.seq li:before{content:counter(n);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--g9);font:800 18px "Bricolage Grotesque";margin-bottom:16px}
+.seq p{margin-top:8px;font-size:15.5px;color:var(--mut)}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.panel{border-radius:22px;overflow:hidden;position:relative;min-height:440px;background:var(--g8);color:#fff;display:flex;align-items:flex-end}
+.panel .land{opacity:1}
+.panel:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(14,40,22,.92),rgba(14,40,22,0) 70%)}
+.panel div{position:relative;z-index:2;padding:30px}
+.panel b{display:block;font:800 30px/1.15 "Bricolage Grotesque";letter-spacing:-.02em}
+.panel span{display:block;margin-top:10px;color:#cfe3c8;font-size:15px}
+.about p+p{margin-top:16px}
+.checks{list-style:none;margin:26px 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
+.checks li{display:flex;gap:10px;font-weight:600}
+.checks li:before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--g6) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='m6 12 4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
+.proj{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proj>div{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px}
+.proj small{font-weight:700;color:var(--g6)}
+.proj h3{margin:8px 0}
+.proj p{font-size:15.5px;color:var(--mut)}
+.contact{background:var(--g8);color:#fff}
+.contact .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.contact p{color:#cfe3c8;margin-top:16px}
+.contact form{background:var(--white);color:var(--ink);border-radius:18px;padding:30px}
+.contact label{display:block;font-weight:700;font-size:14px;margin-bottom:6px;color:var(--g8)}
+.f{margin-bottom:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.status{margin-top:14px;font-weight:600;min-height:1.4em;color:var(--g8)}
+footer{background:var(--g9);color:#bcd2b8;padding:34px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+[hidden]{display:none!important}
+@media(max-width:960px){
+.hero{padding:140px 0 150px}
+.bar form{grid-template-columns:1fr 1fr}
+.bar .btn{grid-column:1/-1;text-align:center}
+.tiles{grid-template-columns:1fr 1fr}
+.seq{grid-template-columns:1fr 1fr}
+.about,.contact .grid{grid-template-columns:1fr;gap:36px}
+.panel{min-height:320px}
+.proj{grid-template-columns:1fr}
+section.s{padding:72px 0}
+}
+@media(max-width:600px){
+.top nav a:not(.btn){display:none}
+.bar form,.tiles,.seq,.checks,.two{grid-template-columns:1fr}
+.hero:before{background:linear-gradient(0deg,rgba(14,40,22,.9),rgba(14,40,22,.6))}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
-<header><div class="w"><a class="logo" href="#">Agri<span>ans</span></a><nav><a href="#services">Services</a><a href="#process">How it works</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
-<main>
-<div class="w hero">
-<h1>Reliable help with policies, research, proposals and business documents.</h1>
-<p class="lead">Agrians takes on small, clearly defined contracts and delivers practical work on time. Tell us what you need and get a written quote.</p>
-<a class="btn" href="#contact">Request a quote</a>
+<header class="top"><div class="wrap">
+<a class="logo" href="#top" aria-label="Agrians, since 2017"><span>AGRI<i>ANS</i></span><small>SINCE 2017</small></a>
+<nav aria-label="Main"><a href="#services">Services</a><a href="#process">How we work</a><a href="#about">About</a><a class="btn gold" href="#contact">Request a quote</a></nav>
+</div></header>
+<main id="top">
+<section class="hero">
+<svg class="land" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe0d0"/><stop offset=".6" stop-color="#f6e7b4"/><stop offset="1" stop-color="#f7d58a"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7d58a" stop-opacity="0"/><stop offset="1" stop-color="#f7d58a" stop-opacity=".55"/></linearGradient></defs>
+<rect width="1600" height="700" fill="url(#sky)"/>
+<circle cx="1010" cy="372" r="74" fill="#fff6d6" opacity=".9"/>
+<path d="M0 392 C180 340 330 372 520 352 C700 332 820 388 1000 366 C1180 344 1340 380 1600 350 L1600 420 L0 420Z" fill="#8fb88a"/>
+<path d="M0 408 C220 372 360 400 560 384 C760 368 900 410 1120 392 C1320 376 1460 402 1600 388 L1600 430 L0 430Z" fill="#5f9a5a"/>
+<rect y="398" width="1600" height="302" fill="#3a7a3a"/>
+<polygon points="1010,400 -1400,760 -1240,760" fill="#2f6b34"/><polygon points="1010,400 -1240,760 -1080,760" fill="#3a7a3a"/><polygon points="1010,400 -1080,760 -920,760" fill="#2f6b34"/><polygon points="1010,400 -920,760 -760,760" fill="#3a7a3a"/><polygon points="1010,400 -760,760 -600,760" fill="#2f6b34"/><polygon points="1010,400 -600,760 -440,760" fill="#3a7a3a"/><polygon points="1010,400 -440,760 -280,760" fill="#2f6b34"/><polygon points="1010,400 -280,760 -120,760" fill="#3a7a3a"/><polygon points="1010,400 -120,760 40,760" fill="#2f6b34"/><polygon points="1010,400 40,760 200,760" fill="#3a7a3a"/><polygon points="1010,400 200,760 360,760" fill="#2f6b34"/><polygon points="1010,400 360,760 520,760" fill="#3a7a3a"/><polygon points="1010,400 520,760 680,760" fill="#2f6b34"/><polygon points="1010,400 680,760 840,760" fill="#3a7a3a"/><polygon points="1010,400 840,760 1000,760" fill="#2f6b34"/><polygon points="1010,400 1000,760 1160,760" fill="#3a7a3a"/><polygon points="1010,400 1160,760 1320,760" fill="#2f6b34"/><polygon points="1010,400 1320,760 1480,760" fill="#3a7a3a"/><polygon points="1010,400 1480,760 1640,760" fill="#2f6b34"/><polygon points="1010,400 1640,760 1800,760" fill="#3a7a3a"/><polygon points="1010,400 1800,760 1960,760" fill="#2f6b34"/><polygon points="1010,400 1960,760 2120,760" fill="#3a7a3a"/><polygon points="1010,400 2120,760 2280,760" fill="#2f6b34"/><polygon points="1010,400 2280,760 2440,760" fill="#3a7a3a"/><polygon points="1010,400 2440,760 2600,760" fill="#2f6b34"/><polygon points="1010,400 2600,760 2760,760" fill="#3a7a3a"/><polygon points="1010,400 2760,760 2920,760" fill="#2f6b34"/>
+<rect y="396" width="1600" height="70" fill="url(#haze)"/>
+<g stroke="#2a5c2f" stroke-width="2" opacity=".5"><path d="M0 398H1600"/></g>
+</svg>
+<div class="wrap">
+<h1>Practical help for farms, projects and the people behind them.</h1>
+<p>Agricultural advisory, project planning, quotations and proposals, from one independent consultant who agrees the scope in writing before any work starts.</p>
+<div class="acts"><a class="btn gold" href="#contact">Request a quote</a><a class="btn ghost" href="#services">See services</a></div>
 </div>
-<section id="services"><div class="w"><h2>Services</h2><div class="g">
-<div class="c"><h3>Policies and procedures</h3><p>Drafting, reviewing and updating policies, procedures, guidelines and practice manuals.</p></div>
-<div class="c"><h3>Research and analysis</h3><p>Briefing notes, options papers, and legislation or literature reviews in plain language.</p></div>
-<div class="c"><h3>Quotations and proposals</h3><p>Clear scopes, costs and timelines. Proposals and bid responses written to the brief.</p></div>
-<div class="c"><h3>Reports and documents</h3><p>Business reports, plans, letters, templates and meeting materials, ready to use.</p></div>
-<div class="c"><h3>Editing and review</h3><p>Proofreading, restructuring and quality checks for documents you already have.</p></div>
-<div class="c"><h3>Tools and automation</h3><p>Spreadsheets, forms, simple websites and AI-assisted workflows that save time.</p></div>
-</div></div></section>
-<section id="process"><div class="w"><h2>How it works</h2><div class="g s">
-<div class="c"><h3>Tell us the task</h3><p>Share what you need, the deadline and any source material.</p></div>
-<div class="c"><h3>Get a written quote</h3><p>A fixed scope, price and timeline before any work starts.</p></div>
-<div class="c"><h3>Review a draft</h3><p>You see the work early and tell us what to adjust.</p></div>
-<div class="c"><h3>Final delivery</h3><p>Revised, finished files in the format you need.</p></div>
-</div></div></section>
-<section id="about"><div class="w"><h2>About</h2>
-<p class="t" style="max-width:680px;font-size:1.05rem">Agrians is an independent practice taking on contract work across policy, research, writing and business support. A fuller introduction is coming soon.</p>
+</section>
+<div class="bar"><div class="wrap">
+<form id="quick" aria-label="Start a project brief">
+<div><label for="q-service">What do you need?</label>
+<select id="q-service"><option>Agricultural advisory</option><option>Ostrich farming guidance</option><option>Project plan or scope</option><option>Quotation or proposal</option><option>Research brief or policy</option><option>Short-term project support</option><option>Presentation or graphic design</option></select></div>
+<div><label for="q-when">Needed by</label>
+<select id="q-when"><option>Flexible</option><option>Within a week</option><option>Within two weeks</option><option>Within a month</option></select></div>
+<div><label for="q-what">The job in one sentence</label>
+<input type="text" id="q-what" maxlength="200" placeholder="For example: a feasibility outline for a small farm"></div>
+<button class="btn dark" type="submit">Start my brief</button>
+</form>
+</div></div>
+<section class="s" id="services"><div class="wrap">
+<div class="head"><h2>Help for the work in front of you</h2><p class="mut">Defined pieces of work with a clear end. You know what you will receive before it starts.</p></div>
+<div class="tiles">
+<article class="tile feat"><div class="pic"><svg viewBox="0 0 64 64"><path d="M32 56V26M32 38C20 38 14 28 14 16c12 0 18 8 18 22ZM32 30c0-12 7-18 18-18 0 12-6 18-18 18Z"/></svg></div>
+<div class="txt"><h3>Agricultural advisory</h3><p>Practical discussion of farm planning, operations and feasibility, including ostrich farming setup questions, before you commit money or land. You receive a written summary of your options.</p></div></article>
+<article class="tile"><div class="pic"><svg viewBox="0 0 64 64"><rect x="10" y="10" width="44" height="44" rx="4"/><path d="M18 22h28M18 32h28M18 42h16"/></svg></div>
+<div class="txt"><h3>Project plans and scoping</h3><p>Your idea turned into a scope, task list and deliverables someone can act on.</p></div></article>
+<article class="tile"><div class="pic"><svg viewBox="0 0 64 64"><path d="M16 8h26l10 10v38H16zM42 8v10h10M24 30h20M24 38h20M24 46h12"/></svg></div>
+<div class="txt"><h3>Quotations and proposals</h3><p>Clear cost breakdowns, proposals and tender responses structured around what the reader must approve.</p></div></article>
+<article class="tile"><div class="pic"><svg viewBox="0 0 64 64"><circle cx="28" cy="28" r="16"/><path d="m40 40 14 14"/></svg></div>
+<div class="txt"><h3>Research briefs and policies</h3><p>Desk research, source comparison, and policies and procedures in plain language.</p></div></article>
+<article class="tile"><div class="pic"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M32 18v14l9 6"/></svg></div>
+<div class="txt"><h3>Short-term project support</h3><p>Extra capacity for a defined assignment or a busy period, subject to scope and availability.</p></div></article>
+<article class="tile"><div class="pic"><svg viewBox="0 0 64 64"><rect x="8" y="12" width="48" height="32" rx="3"/><path d="M24 54h16M32 44v10"/></svg></div>
+<div class="txt"><h3>Presentation and graphic design</h3><p>Slides, business graphics and visuals that make an idea easy to follow.</p></div></article>
+</div>
 </div></section>
-<section id="contact"><div class="w"><h2>Request a quote</h2>
-<p class="t" style="font-size:1.05rem">Contact details are being added. Please check back shortly.</p>
+<section class="s alt" id="process"><div class="wrap">
+<div class="head"><h2>Clear steps, agreed in writing</h2><p class="mut">No vague promises. We settle the work before it begins.</p></div>
+<ol class="seq">
+<li><h3>Share your challenge</h3><p>Describe the goal, deadline and any materials you have.</p></li>
+<li><h3>Define the scope</h3><p>I list the deliverables and assumptions so both sides agree.</p></li>
+<li><h3>Approve the quote</h3><p>You review price and timeline and approve or change it.</p></li>
+<li><h3>Deliver and review</h3><p>You see a draft early, then receive the final files.</p></li>
+</ol>
+</div></section>
+<section class="s" id="work" hidden><div class="wrap">
+<div class="head"><h2>Work I can describe</h2><p class="mut">Client names are withheld under confidentiality. Each entry says what the work was and what was delivered.</p></div>
+<div class="proj" id="work-grid"></div>
+</div></section>
+<section class="s" id="about"><div class="wrap about">
+<div class="panel"><svg class="land" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe0d0"/><stop offset=".6" stop-color="#f6e7b4"/><stop offset="1" stop-color="#f7d58a"/></linearGradient>
+<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7d58a" stop-opacity="0"/><stop offset="1" stop-color="#f7d58a" stop-opacity=".55"/></linearGradient></defs>
+<rect width="1600" height="700" fill="url(#sky)"/>
+<circle cx="1010" cy="372" r="74" fill="#fff6d6" opacity=".9"/>
+<path d="M0 392 C180 340 330 372 520 352 C700 332 820 388 1000 366 C1180 344 1340 380 1600 350 L1600 420 L0 420Z" fill="#8fb88a"/>
+<path d="M0 408 C220 372 360 400 560 384 C760 368 900 410 1120 392 C1320 376 1460 402 1600 388 L1600 430 L0 430Z" fill="#5f9a5a"/>
+<rect y="398" width="1600" height="302" fill="#3a7a3a"/>
+<polygon points="1010,400 -1400,760 -1240,760" fill="#2f6b34"/><polygon points="1010,400 -1240,760 -1080,760" fill="#3a7a3a"/><polygon points="1010,400 -1080,760 -920,760" fill="#2f6b34"/><polygon points="1010,400 -920,760 -760,760" fill="#3a7a3a"/><polygon points="1010,400 -760,760 -600,760" fill="#2f6b34"/><polygon points="1010,400 -600,760 -440,760" fill="#3a7a3a"/><polygon points="1010,400 -440,760 -280,760" fill="#2f6b34"/><polygon points="1010,400 -280,760 -120,760" fill="#3a7a3a"/><polygon points="1010,400 -120,760 40,760" fill="#2f6b34"/><polygon points="1010,400 40,760 200,760" fill="#3a7a3a"/><polygon points="1010,400 200,760 360,760" fill="#2f6b34"/><polygon points="1010,400 360,760 520,760" fill="#3a7a3a"/><polygon points="1010,400 520,760 680,760" fill="#2f6b34"/><polygon points="1010,400 680,760 840,760" fill="#3a7a3a"/><polygon points="1010,400 840,760 1000,760" fill="#2f6b34"/><polygon points="1010,400 1000,760 1160,760" fill="#3a7a3a"/><polygon points="1010,400 1160,760 1320,760" fill="#2f6b34"/><polygon points="1010,400 1320,760 1480,760" fill="#3a7a3a"/><polygon points="1010,400 1480,760 1640,760" fill="#2f6b34"/><polygon points="1010,400 1640,760 1800,760" fill="#3a7a3a"/><polygon points="1010,400 1800,760 1960,760" fill="#2f6b34"/><polygon points="1010,400 1960,760 2120,760" fill="#3a7a3a"/><polygon points="1010,400 2120,760 2280,760" fill="#2f6b34"/><polygon points="1010,400 2280,760 2440,760" fill="#3a7a3a"/><polygon points="1010,400 2440,760 2600,760" fill="#2f6b34"/><polygon points="1010,400 2600,760 2760,760" fill="#3a7a3a"/><polygon points="1010,400 2760,760 2920,760" fill="#2f6b34"/>
+<rect y="396" width="1600" height="70" fill="url(#haze)"/>
+<g stroke="#2a5c2f" stroke-width="2" opacity=".5"><path d="M0 398H1600"/></g>
+</svg><div><b>Daim ul Hassan</b><span>Independent consultant, British Columbia</span></div></div>
+<div>
+<h2>One person, accountable for the work</h2>
+<p style="margin-top:20px">I am Daim ul Hassan, an independent builder and researcher based in British Columbia, Canada. I run Agrians to take on focused project, research and document work.</p>
+<p>I have delivered many projects for clients who ask not to be named, so I describe the work instead of the client. I only accept a job when the scope is clear enough to deliver well, and I will tell you early if something is outside what I can do.</p>
+<ul class="checks"><li>Clearly defined scope</li><li>Practical deliverables</li><li>Flexible collaboration</li><li>Direct communication</li></ul>
+<a class="btn dark" href="#contact">Tell me what you need</a>
+</div>
+</div></section>
+<section class="s contact" id="contact"><div class="wrap grid">
+<div><h2>Tell me what you are working on</h2><p>Describe the job, the deadline and any limits. You will get a written quote with scope, price and timeline.</p></div>
+<form id="inquiry-form">
+<div class="two">
+<div class="f"><label for="name">Your name</label><input id="name" name="name" type="text" required maxlength="100" autocomplete="name"></div>
+<div class="f"><label for="email">Email address</label><input id="email" name="email" type="email" required maxlength="200" autocomplete="email"></div>
+</div>
+<div class="f"><label for="message">Your brief</label><textarea id="message" name="message" required maxlength="5000" placeholder="What do you need, and by when?"></textarea></div>
+<input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+<button class="btn dark" type="submit">Send brief</button>
+<p class="status" id="form-status" role="status"></p>
+</form>
 </div></section>
 </main>
-<footer><div class="w">&copy; Agrians</div></footer>
+<footer><div class="wrap"><span>© <span id="year"></span> AGRIANS, since 2017. Daim ul Hassan.</span><span>British Columbia, Canada · agrians.com</span></div></footer>
+<script>
+// SETTINGS (fill in before launch)
+const CONTACT_EMAIL = '';   // verified business email (mailto fallback)
+const WEB3FORMS_KEY = '4a56eebe-5bb4-4ced-b676-6dc94039fade';   // access key from web3forms.com (public by design; hides your email)
+const FORM_ENDPOINT = '';   // optional alternative: Formspree URL
+// Anonymized work. Leave empty to keep the section hidden.
+// Format: {tag:'Sector', title:'Type of project', text:'What was delivered.'}
+const PROJECTS = [];
+document.getElementById('year').textContent = new Date().getFullYear();
+if (PROJECTS.length) {
+const g = document.getElementById('work-grid');
+PROJECTS.forEach(p => {
+const d = document.createElement('div'), s = document.createElement('small'),
+h = document.createElement('h3'), q = document.createElement('p');
+s.textContent = p.tag; h.textContent = p.title; q.textContent = p.text;
+d.append(s, h, q); g.append(d);
+});
+document.getElementById('work').hidden = false;
+}
+const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+document.getElementById('quick').addEventListener('submit', e => {
+e.preventDefault();
+const what = document.getElementById('q-what').value.trim();
+document.getElementById('message').value =
+'PROJECT BRIEF\nNeed: ' + document.getElementById('q-service').value +
+'\nNeeded by: ' + document.getElementById('q-when').value +
+'\nJob: ' + (what || '(not described)') + '\n';
+document.getElementById('contact').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
+setTimeout(() => document.getElementById('name').focus({preventScroll:true}), 450);
+});
+document.getElementById('inquiry-form').addEventListener('submit', async function(e){
+e.preventDefault();
+if (!this.reportValidity()) return;
+const d = new FormData(this); if (d.get('website')) return;
+const subject = 'Agrians project brief from ' + d.get('name');
+const body = 'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\n\n' + d.get('message');
+const st = document.getElementById('form-status');
+if (WEB3FORMS_KEY) {
+try {
+const fd = new FormData();
+fd.append('access_key', WEB3FORMS_KEY);
+fd.append('subject', subject);
+fd.append('from_name', 'Agrians website');
+fd.append('name', d.get('name'));
+fd.append('email', d.get('email'));
+fd.append('message', d.get('message'));
+const r = await fetch('https://api.web3forms.com/submit', {method:'POST', headers:{Accept:'application/json'}, body: fd});
+const j = await r.json();
+if (!r.ok || !j.success) throw 0;
+st.textContent = 'Sent. You will get a reply by email.'; this.reset();
+} catch (err) { st.textContent = 'Not sent. Check your connection and try again.'; }
+return;
+}
+if (FORM_ENDPOINT) {
+try {
+const r = await fetch(FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json', Accept:'application/json'},
+body: JSON.stringify({name:d.get('name'), email:d.get('email'), message:d.get('message'), subject})});
+if (!r.ok) throw 0;
+st.textContent = 'Sent. You will get a reply by email.'; this.reset();
+} catch (err) { st.textContent = 'Not sent. Check your connection and try again.'; }
+return;
+}
+if (CONTACT_EMAIL) {
+st.textContent = 'Your email app will open with the brief ready. Press Send there.';
+location.href = 'mailto:' + encodeURIComponent(CONTACT_EMAIL) + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+} else {
+try { await navigator.clipboard.writeText(subject + '\n\n' + body); st.textContent = 'Brief copied. Sending is not set up yet.'; }
+catch (err) { st.textContent = 'Sending is not set up yet.'; }
+}
+});
+</script>
 </body>
 </html>
